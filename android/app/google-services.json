@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "876190097687",
+    "project_id": "socials-7ea05",
+    "storage_bucket": "socials-7ea05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:876190097687:android:d9c207521e7409873a1752",
+        "android_client_info": {
+          "package_name": "com.socials"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "876190097687-rv42npgodfg3fkqa0jci8l9blub607n2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBlsocyfQmFY0_ga5uDjkCn-cpKagdZJ90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "876190097687-rv42npgodfg3fkqa0jci8l9blub607n2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "876190097687-9052bfbs5j1umpanq8j9bmds6umd438b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.Socials"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
