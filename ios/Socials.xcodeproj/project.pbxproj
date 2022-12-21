@@ -12,6 +12,7 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		669B90CC2950E23A00263E4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669B90CB2950E23A00263E4D /* GoogleService-Info.plist */; };
+		669B90CE29535F3B00263E4D /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 669B90CD29535F3B00263E4D /* Fonts */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		BE828C27DAA8147218B0F10B /* Pods_Socials_SocialsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51588E1D37CEC858DED34380 /* Pods_Socials_SocialsTests.framework */; };
 		FCF83317E0026C531F3DAACD /* Pods_Socials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7348CA90D6119AC5D22107CC /* Pods_Socials.framework */; };
@@ -42,6 +43,7 @@
 		5709B34CF0A7D63546082F79 /* Pods-Socials.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Socials.release.xcconfig"; path = "Target Support Files/Pods-Socials/Pods-Socials.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-Socials-SocialsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Socials-SocialsTests.debug.xcconfig"; path = "Target Support Files/Pods-Socials-SocialsTests/Pods-Socials-SocialsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		669B90CB2950E23A00263E4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		669B90CD29535F3B00263E4D /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Fonts; path = "../node_modules/react-native-vector-icons/Fonts"; sourceTree = "<group>"; };
 		7348CA90D6119AC5D22107CC /* Pods_Socials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Socials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Socials/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Socials-SocialsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Socials-SocialsTests.release.xcconfig"; path = "Target Support Files/Pods-Socials-SocialsTests/Pods-Socials-SocialsTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		13B07FAE1A68108700A75B9A /* Socials */ = {
 			isa = PBXGroup;
 			children = (
+				669B90CD29535F3B00263E4D /* Fonts */,
 				669B90CB2950E23A00263E4D /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -249,6 +252,7 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				669B90CC2950E23A00263E4D /* GoogleService-Info.plist in Resources */,
+				669B90CE29535F3B00263E4D /* Fonts in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
