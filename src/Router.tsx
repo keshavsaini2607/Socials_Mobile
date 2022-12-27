@@ -1,14 +1,33 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import AuthStack from './Stacks/AuthStack';
 import HomeStack from './Stacks/HomeStack';
-import {useAppSelector} from './app/hooks';
+import {useAppDispatch, useAppSelector} from './app/hooks';
+import {setUser} from './app/slices/authSlice';
+import auth from '@react-native-firebase/auth';
 
 const Router = () => {
   const {user} = useAppSelector(state => state.auth);
-  let activeStack = user ? <HomeStack /> : <AuthStack />;
+  let activeStack = user?.payload ? <HomeStack /> : <AuthStack />;
+  const [initializing, setInitializing] = useState(true);
+  // const {user} = useAppSelector((state: any) => state.auth);
+  const dispatch = useAppDispatch();
 
-  console.log({user});
+  // Handle user state changes
+  function onAuthStateChanged(authUser: any) {
+    dispatch(setUser(authUser));
+    if (initializing) setInitializing(false);
+  }
+
+  useEffect(() => {
+    let subscriber: any;
+    (async () => {
+      subscriber = await auth().onAuthStateChanged(onAuthStateChanged);
+    })();
+    return subscriber; // unsubscribe on unmount
+  }, []);
+
+  if (initializing) return null;
 
   return (
     <>

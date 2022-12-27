@@ -4,6 +4,7 @@ import {Box, Text, Flex, Stack, View} from 'native-base';
 import {useNavigation} from '@react-navigation/native';
 import DynamicForm from '../../../components/DynamicForm';
 import {FormInterface} from '../../../shared/interfaces/FormInterface';
+import auth from '@react-native-firebase/auth';
 
 let formData: FormInterface = {
   title: 'Register',
@@ -33,7 +34,17 @@ let formData: FormInterface = {
 const RegisterPage = () => {
   const {navigate} = useNavigation();
 
-  // const register = () => {};
+  const submit = async (data: any) => {
+    console.log(data);
+    await auth()
+      .createUserWithEmailAndPassword(data.email, data.password)
+      .then(res => {
+        console.log('new user created', res);
+      })
+      .catch(error => {
+        console.log('regiter error', error);
+      });
+  };
 
   return (
     <SafeAreaView>
@@ -53,7 +64,7 @@ const RegisterPage = () => {
             </Text>
           </Flex>
           <Box w="100%">
-            <DynamicForm data={formData} />
+            <DynamicForm data={formData} submit={submit} />
           </Box>
         </Box>
         <Stack bottom="2" position="absolute" width="full">

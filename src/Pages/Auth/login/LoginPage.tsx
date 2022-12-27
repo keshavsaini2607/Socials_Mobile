@@ -6,6 +6,7 @@ import GithubLogin from '../../../components/SocialButtons/GithubLoginButton';
 import {useNavigation} from '@react-navigation/native';
 import {FormInterface} from '../../../shared/interfaces/FormInterface';
 import DynamicForm from '../../../components/DynamicForm';
+import auth from '@react-native-firebase/auth';
 
 const LoginPage = () => {
   const {navigate} = useNavigation();
@@ -30,6 +31,18 @@ const LoginPage = () => {
     ],
   };
 
+  const submit = async (data: any) => {
+    console.log(data);
+    await auth()
+      .signInWithEmailAndPassword(data.email, data.password)
+      .then(res => {
+        console.log('authenticated', res);
+      })
+      .catch(err => {
+        console.log('invalid user', err);
+      });
+  };
+
   return (
     <SafeAreaView>
       <View height="full">
@@ -48,7 +61,7 @@ const LoginPage = () => {
             </Text>
           </Flex>
           <Box w="100%">
-            <DynamicForm data={formData} />
+            <DynamicForm data={formData} submit={submit} />
           </Box>
         </Box>
         <Stack mx="4">
