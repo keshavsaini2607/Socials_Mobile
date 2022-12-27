@@ -4,14 +4,17 @@ import Router from './src/Router';
 import {NativeBaseProvider} from 'native-base';
 import {Provider} from 'react-redux';
 import {store} from './src/app/store';
+// import {useAppDispatch} from './src/app/hooks';
+// import {setUser} from './src/app/slices/authSlice';
 
 const App = () => {
   const [initializing, setInitializing] = useState(true);
-  const [user, setUser] = useState();
+  // const {user} = useAppSelector((state: any) => state.auth);
+  // const dispatch = useAppDispatch();
 
   // Handle user state changes
   function onAuthStateChanged(authUser: any) {
-    setUser(authUser);
+    // dispatch(setUser(authUser));
     console.log(authUser);
     if (initializing) setInitializing(false);
   }
@@ -27,11 +30,11 @@ const App = () => {
   if (initializing) return null;
 
   return (
-    <NativeBaseProvider>
-      <Provider store={store}>
+    <Provider store={store}>
+      <NativeBaseProvider>
         <Router />
-      </Provider>
-    </NativeBaseProvider>
+      </NativeBaseProvider>
+    </Provider>
   );
 };
 

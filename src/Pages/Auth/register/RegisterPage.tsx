@@ -1,22 +1,39 @@
 import {Pressable, SafeAreaView} from 'react-native';
 import React from 'react';
-import {
-  Box,
-  Text,
-  Flex,
-  FormControl,
-  Stack,
-  Input,
-  WarningOutlineIcon,
-  View,
-} from 'native-base';
+import {Box, Text, Flex, Stack, View} from 'native-base';
 import {useNavigation} from '@react-navigation/native';
-import CustomButton from '../../../components/CustomButton';
+import DynamicForm from '../../../components/DynamicForm';
+import {FormInterface} from '../../../shared/interfaces/FormInterface';
+
+let formData: FormInterface = {
+  title: 'Register',
+  subTitle: "Let's get you started!",
+  formFields: [
+    {
+      controlType: 'text',
+      key: 'fullname',
+      label: 'Full Name',
+      required: true,
+    },
+    {
+      controlType: 'text',
+      key: 'email',
+      label: 'Email',
+      required: true,
+    },
+    {
+      controlType: 'password',
+      key: 'password',
+      label: 'Password',
+      required: true,
+    },
+  ],
+};
 
 const RegisterPage = () => {
   const {navigate} = useNavigation();
 
-  const register = () => {};
+  // const register = () => {};
 
   return (
     <SafeAreaView>
@@ -36,53 +53,7 @@ const RegisterPage = () => {
             </Text>
           </Flex>
           <Box w="100%">
-            <FormControl isRequired>
-              <Stack mx="4">
-                <FormControl.Label>Full Name</FormControl.Label>
-                <Input
-                  type="text"
-                  placeholder="full name"
-                  paddingTop="4"
-                  paddingBottom="4"
-                />
-                <FormControl.ErrorMessage
-                  leftIcon={<WarningOutlineIcon size="xs" />}>
-                  Atleast 6 characters are required.
-                </FormControl.ErrorMessage>
-              </Stack>
-              <Stack mx="4" my="2">
-                <FormControl.Label>Email</FormControl.Label>
-                <Input
-                  type="text"
-                  placeholder="email"
-                  paddingTop="4"
-                  paddingBottom="4"
-                />
-                <FormControl.ErrorMessage
-                  leftIcon={<WarningOutlineIcon size="xs" />}>
-                  Atleast 6 characters are required.
-                </FormControl.ErrorMessage>
-              </Stack>
-              <Stack mx="4">
-                <FormControl.Label>Password</FormControl.Label>
-                <Input
-                  type="password"
-                  placeholder="password"
-                  paddingTop="4"
-                  paddingBottom="4"
-                />
-                <FormControl.HelperText>
-                  Must be atleast 6 characters.
-                </FormControl.HelperText>
-                <FormControl.ErrorMessage
-                  leftIcon={<WarningOutlineIcon size="xs" />}>
-                  Atleast 6 characters are required.
-                </FormControl.ErrorMessage>
-              </Stack>
-              <Stack mx="4" my="8">
-                <CustomButton title="Register" click={register} />
-              </Stack>
-            </FormControl>
+            <DynamicForm data={formData} />
           </Box>
         </Box>
         <Stack bottom="2" position="absolute" width="full">
