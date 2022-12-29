@@ -23,16 +23,19 @@ const DynamicForm = ({data, submit}: props) => {
               control={control}
               name={field.key}
               render={({field: {onChange, value, onBlur}}) => (
-                <Input
-                  key={field.key}
-                  type={field.controlType}
-                  placeholder={field.key}
-                  isRequired={field.required}
-                  py={4}
-                  value={value}
-                  onBlur={onBlur}
-                  onChangeText={valueChange => onChange(valueChange)}
-                />
+                <React.Fragment>
+                  <FormControl.Label>{field.label}</FormControl.Label>
+                  <Input
+                    key={field.key}
+                    type={field.controlType}
+                    placeholder={field.key}
+                    isRequired={field.required}
+                    py={4}
+                    value={value}
+                    onBlur={onBlur}
+                    onChangeText={valueChange => onChange(valueChange)}
+                  />
+                </React.Fragment>
               )}
             />
           ))}

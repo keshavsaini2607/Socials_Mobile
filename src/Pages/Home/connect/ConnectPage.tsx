@@ -1,12 +1,12 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const DashboardPage = () => {
+const ConnectPage = () => {
   return (
     <View>
-      <Text>DashboardPage</Text>
+      <Text>ConnectPage</Text>
     </View>
   );
 };
 
-export default DashboardPage;
+export default ConnectPage;

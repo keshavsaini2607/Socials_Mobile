@@ -1,12 +1,12 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const DashboardPage = () => {
+const ProfilePage = () => {
   return (
     <View>
-      <Text>DashboardPage</Text>
+      <Text>ProfilePage</Text>
     </View>
   );
 };
 
-export default DashboardPage;
+export default ProfilePage;

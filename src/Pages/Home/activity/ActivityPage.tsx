@@ -1,12 +1,12 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const DashboardPage = () => {
+const ActivityPage = () => {
   return (
     <View>
-      <Text>DashboardPage</Text>
+      <Text>ActivityPage</Text>
     </View>
   );
 };
 
-export default DashboardPage;
+export default ActivityPage;
