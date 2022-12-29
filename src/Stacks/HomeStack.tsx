@@ -11,7 +11,9 @@ const Tabs = createBottomTabNavigator();
 
 const HomeStack = () => {
   return (
-    <Tabs.Navigator initialRouteName="Dashboard">
+    <Tabs.Navigator
+      initialRouteName="Dashboard"
+      screenOptions={{headerShown: false}}>
       <Tabs.Screen name="Dashboard" component={DashboardPage} />
       <Tabs.Screen name="Connect" component={ConnectPage} />
       <Tabs.Screen name="Activity" component={ActivityPage} />
