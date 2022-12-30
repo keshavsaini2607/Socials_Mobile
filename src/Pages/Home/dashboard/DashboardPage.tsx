@@ -1,8 +1,9 @@
-import {Animated, View} from 'react-native';
+import {Animated, StyleSheet, View} from 'react-native';
 import React, {useRef} from 'react';
 
 //Components
 import CollapsableTopbar from '../../../components/CollapsableTopbar';
+import Post from '../../../components/Post';
 
 //static assets
 import dashimage from '../../../assets/dash.jpg';
@@ -22,8 +23,20 @@ const DashboardPage = () => {
           },
         )}
         scrollEventThrottle={16}>
-        <View style={styles.bannerContainer}>
-          <Animated.Image style={styles.banner(scrollA)} source={dashimage} />
+        <View style={bannerStyles.bannerContainer}>
+          <Animated.Image
+            style={bannerStyles.banner(scrollA)}
+            source={dashimage}
+          />
+        </View>
+        <View style={styles.posts}>
+          {/* <Text style={styles.headingText}>
+            You'll find the posts that interest's you over here
+          </Text> */}
+          <Post />
+          <Post />
+          <Post />
+          <Post />
         </View>
       </Animated.ScrollView>
     </View>
@@ -32,7 +45,7 @@ const DashboardPage = () => {
 
 export default DashboardPage;
 
-const styles = {
+const bannerStyles = {
   bannerContainer: {
     marginTop: -1000,
     paddingTop: 1000,
@@ -58,3 +71,16 @@ const styles = {
     ],
   }),
 };
+
+const styles = StyleSheet.create({
+  headingText: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    letterSpacing: 1,
+    lineHeight: 30,
+    fontFamily: 'ProstoOne-Regular',
+  },
+  posts: {
+    padding: 10,
+  },
+});
