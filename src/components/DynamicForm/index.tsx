@@ -6,6 +6,7 @@ import {Controller, useForm} from 'react-hook-form';
 import BackHeader from '../BackHeader';
 import FormInput from './Fields/Input';
 import FormTextArea from './Fields/TextArea';
+import FilePicker from './Fields/FilePicker';
 
 type props = {
   data: FormInterface;
@@ -30,6 +31,8 @@ const DynamicForm = ({data, submit}: props) => {
             controllerField={controllerField}
           />
         );
+      case 'file':
+        return <FilePicker />;
     }
   };
 

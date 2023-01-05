@@ -22,9 +22,15 @@ const ReferralApplication = () => {
         required: true,
       },
       {
+        controlType: 'file',
+        key: 'resume',
+        label: 'Upload your updated CV',
+        required: true,
+      },
+      {
         controlType: 'textarea',
         key: 'reason',
-        label: 'Why are you better than the rest?',
+        label: 'How are you better than the rest?',
         required: true,
       },
     ],
