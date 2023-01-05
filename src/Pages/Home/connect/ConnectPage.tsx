@@ -1,22 +1,44 @@
-import {SafeAreaView, View, StyleSheet, StatusBar} from 'react-native';
+import {
+  SafeAreaView,
+  View,
+  StyleSheet,
+  StatusBar,
+  ScrollView,
+} from 'react-native';
 import React from 'react';
-import {Text} from 'native-base';
+import {Flex, Text} from 'native-base';
 import Searchbar from '../../../components/Searchbar';
-
-//Assets
+import MentorCard from '../../../components/MentorCard';
 
 const ConnectPage = () => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" />
-      <View style={styles.connectHeader}>
-        <Text fontSize="xl">Connect with your favourite mentors!</Text>
-        <Text color="gray.700">
-          And tell them your story and convince them to refer you for your next
-          dream job.
-        </Text>
-      </View>
-      <Searchbar />
+      <ScrollView>
+        <View style={styles.connectHeader}>
+          <Text fontSize="xl">Connect with your favourite mentors!</Text>
+          <Text color="gray.700">
+            And tell them your story and convince them to refer you for your
+            next dream job.
+          </Text>
+        </View>
+        <Searchbar />
+        <Flex
+          mx={2}
+          flexDirection="row"
+          flexWrap="wrap"
+          justifyContent="space-between">
+          <MentorCard />
+          <MentorCard />
+          <MentorCard />
+          <MentorCard />
+          <MentorCard />
+          <MentorCard />
+          <MentorCard />
+          <MentorCard />
+          <MentorCard />
+        </Flex>
+      </ScrollView>
     </SafeAreaView>
   );
 };

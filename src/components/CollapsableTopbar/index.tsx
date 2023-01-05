@@ -43,7 +43,7 @@ const styles = {
     height: TOPNAVI_H + safeArea.top,
     justifyContent: 'center',
     shadowOffset: {y: 0},
-    backgroundColor: isTransparent ? '#0001' : '#FFF',
+    backgroundColor: isTransparent ? '#0001' : '#F6FBF4',
     shadowOpacity: isTransparent ? 0 : 0.5,
     elevation: isTransparent ? 0.01 : 5,
     zIndex: 100,
@@ -52,7 +52,7 @@ const styles = {
     textAlign: 'center',
     fontWeight: 'bold',
     fontSize: 18,
-    color: isTransparent ? '#FFF' : '#000',
+    color: isTransparent ? '#fff' : '#000',
   }),
 };
 

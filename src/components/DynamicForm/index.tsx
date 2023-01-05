@@ -1,8 +1,11 @@
 import React from 'react';
-import {Box, FormControl, Input, ScrollView, Stack} from 'native-base';
+import {Box, FormControl, ScrollView, Stack} from 'native-base';
 import CustomButton from '../CustomButton';
 import {FormInterface} from '../../shared/interfaces/FormInterface';
 import {Controller, useForm} from 'react-hook-form';
+import BackHeader from '../BackHeader';
+import FormInput from './Fields/Input';
+import FormTextArea from './Fields/TextArea';
 
 type props = {
   data: FormInterface;
@@ -14,27 +17,37 @@ const DynamicForm = ({data, submit}: props) => {
 
   const onSubmit = (formData: any) => submit(formData);
 
+  const renderController = (formField: any, controllerField: any) => {
+    switch (formField.controlType) {
+      case 'text':
+        return (
+          <FormInput formField={formField} controllerField={controllerField} />
+        );
+      case 'textarea':
+        return (
+          <FormTextArea
+            formField={formField}
+            controllerField={controllerField}
+          />
+        );
+    }
+  };
+
   return (
     <ScrollView>
+      <BackHeader />
       <Stack mx="4">
         <FormControl>
-          {data.formFields.map((field: any) => (
+          {data.formFields.map((formField: any) => (
             <Controller
               control={control}
-              name={field.key}
-              render={({field: {onChange, value, onBlur}}) => (
+              name={formField.key}
+              render={({field}) => (
                 <React.Fragment>
-                  <FormControl.Label>{field.label}</FormControl.Label>
-                  <Input
-                    key={field.key}
-                    type={field.controlType}
-                    placeholder={field.key}
-                    isRequired={field.required}
-                    py={4}
-                    value={value}
-                    onBlur={onBlur}
-                    onChangeText={valueChange => onChange(valueChange)}
-                  />
+                  <FormControl.Label mt={2}>
+                    {formField.label}
+                  </FormControl.Label>
+                  {renderController(formField, field)}
                 </React.Fragment>
               )}
             />

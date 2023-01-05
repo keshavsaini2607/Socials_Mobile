@@ -6,14 +6,13 @@ import CollapsableTopbar from '../../../components/CollapsableTopbar';
 import Post from '../../../components/Post';
 
 //static assets
-import dashimage from '../../../assets/dash.jpg';
 import {BANNER_H} from '../../../utils/constants';
 
 const DashboardPage = () => {
   const scrollA = useRef(new Animated.Value(0)).current;
 
   return (
-    <View>
+    <View style={styles.container}>
       <CollapsableTopbar title="Socials" scrollA={scrollA} />
       <Animated.ScrollView
         onScroll={Animated.event(
@@ -26,13 +25,12 @@ const DashboardPage = () => {
         <View style={bannerStyles.bannerContainer}>
           <Animated.Image
             style={bannerStyles.banner(scrollA)}
-            source={dashimage}
+            source={{
+              uri: 'https://images.pexels.com/photos/428318/pexels-photo-428318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+            }}
           />
         </View>
         <View style={styles.posts}>
-          {/* <Text style={styles.headingText}>
-            You'll find the posts that interest's you over here
-          </Text> */}
           <Post />
           <Post />
           <Post />
@@ -73,6 +71,10 @@ const bannerStyles = {
 };
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#FFF',
+  },
   headingText: {
     fontSize: 25,
     fontWeight: 'bold',

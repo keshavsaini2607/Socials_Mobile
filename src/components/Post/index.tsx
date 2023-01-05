@@ -37,7 +37,7 @@ const Post = () => {
       <Box>
         <Image
           source={{
-            uri: 'https://cdn.pixabay.com/photo/2022/12/22/20/18/oil-candles-7672890_1280.jpg',
+            uri: 'https://cdn.pixabay.com/photo/2020/12/28/20/45/frozen-lake-5868472_1280.jpg',
           }}
           style={styles.postImage}
           alt="imageLink"

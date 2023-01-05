@@ -5,6 +5,8 @@ import {Provider} from 'react-redux';
 import {store} from './src/app/store';
 
 const App = () => {
+  console.disableYellowBox = true;
+
   return (
     <Provider store={store}>
       <NativeBaseProvider>

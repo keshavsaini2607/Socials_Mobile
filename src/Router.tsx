@@ -5,10 +5,11 @@ import HomeStack from './Stacks/HomeStack';
 import {useAppDispatch, useAppSelector} from './app/hooks';
 import {setUser} from './app/slices/authSlice';
 import auth from '@react-native-firebase/auth';
+import MainStack from './Stacks/MainStack';
 
 const Router = () => {
   const {user} = useAppSelector(state => state.auth);
-  let activeStack = user?.payload ? <HomeStack /> : <AuthStack />;
+  let activeStack = user?.payload ? <MainStack /> : <AuthStack />;
   const [initializing, setInitializing] = useState(true);
   // const {user} = useAppSelector((state: any) => state.auth);
   const dispatch = useAppDispatch();

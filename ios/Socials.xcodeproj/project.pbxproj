@@ -13,10 +13,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		669B90CC2950E23A00263E4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 669B90CB2950E23A00263E4D /* GoogleService-Info.plist */; };
 		669B90CE29535F3B00263E4D /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 669B90CD29535F3B00263E4D /* Fonts */; };
+		67C126CD03E54FF38869E198 /* ProstoOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBF8EC11E8764CE1A94F8B2A /* ProstoOne-Regular.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		BE828C27DAA8147218B0F10B /* Pods_Socials_SocialsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51588E1D37CEC858DED34380 /* Pods_Socials_SocialsTests.framework */; };
 		FCF83317E0026C531F3DAACD /* Pods_Socials.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7348CA90D6119AC5D22107CC /* Pods_Socials.framework */; };
-		67C126CD03E54FF38869E198 /* ProstoOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DBF8EC11E8764CE1A94F8B2A /* ProstoOne-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +39,7 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Socials/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Socials/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Socials/main.m; sourceTree = "<group>"; };
+		2AFE7D5E0CD648398F467B54 /* SignikaNegative-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "SignikaNegative-VariableFont_wght.ttf"; path = "../assets/fonts/Signika_Negative/SignikaNegative-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-Socials.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Socials.debug.xcconfig"; path = "Target Support Files/Pods-Socials/Pods-Socials.debug.xcconfig"; sourceTree = "<group>"; };
 		51588E1D37CEC858DED34380 /* Pods_Socials_SocialsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Socials_SocialsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5709B34CF0A7D63546082F79 /* Pods-Socials.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Socials.release.xcconfig"; path = "Target Support Files/Pods-Socials/Pods-Socials.release.xcconfig"; sourceTree = "<group>"; };
@@ -48,9 +49,8 @@
 		7348CA90D6119AC5D22107CC /* Pods_Socials.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Socials.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Socials/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-Socials-SocialsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Socials-SocialsTests.release.xcconfig"; path = "Target Support Files/Pods-Socials-SocialsTests/Pods-Socials-SocialsTests.release.xcconfig"; sourceTree = "<group>"; };
+		DBF8EC11E8764CE1A94F8B2A /* ProstoOne-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "ProstoOne-Regular.ttf"; path = "../assets/fonts/ProstoOne-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		DBF8EC11E8764CE1A94F8B2A /* ProstoOne-Regular.ttf */ = {isa = PBXFileReference; name = "ProstoOne-Regular.ttf"; path = "../assets/fonts/ProstoOne-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2AFE7D5E0CD648398F467B54 /* SignikaNegative-VariableFont_wght.ttf */ = {isa = PBXFileReference; name = "SignikaNegative-VariableFont_wght.ttf"; path = "../assets/fonts/Signika_Negative/SignikaNegative-VariableFont_wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +105,16 @@
 			name = Socials;
 			sourceTree = "<group>";
 		};
+		288666E8BB7A4FA78A9E9F4A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DBF8EC11E8764CE1A94F8B2A /* ProstoOne-Regular.ttf */,
+				2AFE7D5E0CD648398F467B54 /* SignikaNegative-VariableFont_wght.ttf */,
+			);
+			name = Resources;
+			path = "";
+			sourceTree = "<group>";
+		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,16 +167,6 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		288666E8BB7A4FA78A9E9F4A /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				DBF8EC11E8764CE1A94F8B2A /* ProstoOne-Regular.ttf */,
-				2AFE7D5E0CD648398F467B54 /* SignikaNegative-VariableFont_wght.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -268,7 +268,6 @@
 				669B90CC2950E23A00263E4D /* GoogleService-Info.plist in Resources */,
 				669B90CE29535F3B00263E4D /* Fonts in Resources */,
 				67C126CD03E54FF38869E198 /* ProstoOne-Regular.ttf in Resources */,
-				2BAE311F12854B48B0607161 /* SignikaNegative-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
