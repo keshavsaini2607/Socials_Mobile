@@ -1,11 +1,12 @@
-import {View, Text} from 'react-native';
+import {Text, SafeAreaView, StatusBar} from 'react-native';
 import React from 'react';
 
 const ActivityPage = () => {
   return (
-    <View>
+    <SafeAreaView>
+      <StatusBar barStyle="dark-content" />
       <Text>ActivityPage</Text>
-    </View>
+    </SafeAreaView>
   );
 };
 

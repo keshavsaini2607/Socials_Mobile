@@ -10,21 +10,6 @@ import {
 const Tabs = createBottomTabNavigator();
 import IonIcons from 'react-native-vector-icons/Ionicons';
 
-let screenOptions = {
-  headerShown: false,
-  tabBarStyle: {
-    backgroundColor: '#ccc',
-    height: 100,
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
-  },
-  tabBarItemStyle: {
-    margin: 5,
-    borderRadius: 10,
-  },
-  tabBarLabelStyle: {display: 'none'},
-};
-
 const HomeStack = () => {
   return (
     <Tabs.Navigator
